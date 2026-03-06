@@ -12,6 +12,7 @@ public partial class StudentControl : UserControl
 {
     public StudentControl()
     {
+        //ОТВЕЧАЕТ ЗА ВЫВОД СПИСКА
         InitializeComponent();
         DgStudents.ItemsSource = ConnectionClass.connect.Users.Include(g => g.IdGroupNavigation).ToList();
         Refresh();
