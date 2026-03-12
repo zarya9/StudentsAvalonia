@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using StudentsAvalonia.Classes;
+using StudentsAvalonia.Data;
 using System.Linq;
 
 namespace StudentsAvalonia;
@@ -33,5 +34,12 @@ public partial class AuthPage : Window
 
     private void TextBlock_PointerPressed(object? sender, Avalonia.Input.PointerPressedEventArgs e)
     {
+        var reg = new RegistPage(new User(), new Login());
+        reg.Show();
+        Close();
     }
+
+    
+
+    
 }
